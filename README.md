@@ -5,7 +5,7 @@ FewTags VRCX Is A ReWork Of The
 This Application Uses VRCX IPC Client From
 [Yoinker Detector V3](https://yd.just-h.party/)
 
-Which Allows Users To Click On Someone On VRCX And See Their FewTags As Well The Original Concept Of Seeing Your FewTags As Well As See FewTags Of People Joining And Leaving
+Which Allows Users To Click On Someone On VRCX And See Their FewTags As Well As The Original Concept Of Seeing Your FewTags As Well As See FewTags Of People Joining And Leaving
 
 It Is Also A OSC And RPC Which Are Togglable On Restart Of The Application
 
