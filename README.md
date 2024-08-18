@@ -16,7 +16,9 @@ Avatar/World Creators, Known Crashers, Known Ripper/Reuploaders, VRCMG Members, 
 
 # Notes
 You Can Use This Before And After VRChat Is Running
+
 When You See A Windows Security Popup That Is The VRChat OSC
+
 When You See "Failed connection to discord-ipc" Either Turn Discord Activity On Or Turn RPC Off
 
 [Fewdys Server Link](https://discord.gg/EN4RrZR)
