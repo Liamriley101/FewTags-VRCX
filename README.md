@@ -15,4 +15,5 @@ Avatar/World Creators, Known Crashers, Known Ripper/Reuploaders, VRCMG Members, 
 & People Who Just Want Whatever They Want To Be Tagged. Includes But Is Not Limited to VRChat Team/Staff/Moderation & Alt Accounts
 
 # Notes
+If You Believe Its Malicious Use DNSpy
 [Fewdys Server Link](https://discord.gg/EN4RrZR)
