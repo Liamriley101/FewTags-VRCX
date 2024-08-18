@@ -15,7 +15,8 @@ Avatar/World Creators, Known Crashers, Known Ripper/Reuploaders, VRCMG Members, 
 & People Who Just Want Whatever They Want To Be Tagged. Includes But Is Not Limited to VRChat Team/Staff/Moderation & Alt Accounts
 
 # Notes
-If You Believe Its Malicious Use DNSpy
-
+You Can Use This Before And After VRChat Is Running
+When You See A Windows Security Popup That Is The VRChat OSC
+When You See "Failed connection to discord-ipc" Either Turn Discord Activity On Or Turn RPC Off
 
 [Fewdys Server Link](https://discord.gg/EN4RrZR)
