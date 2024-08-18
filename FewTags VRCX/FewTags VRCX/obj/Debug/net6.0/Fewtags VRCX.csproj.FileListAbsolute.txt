@@ -1,0 +1,23 @@
+C:\Users\User\Desktop\VisualStudio\Fewtags VRCX\Fewtags VRCX\obj\Debug\net6.0\Fewtags VRCX.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\VisualStudio\Fewtags VRCX\Fewtags VRCX\obj\Debug\net6.0\Fewtags VRCX.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\VisualStudio\Fewtags VRCX\Fewtags VRCX\obj\Debug\net6.0\Fewtags VRCX.AssemblyInfo.cs
+C:\Users\User\Desktop\VisualStudio\Fewtags VRCX\Fewtags VRCX\obj\Debug\net6.0\Fewtags VRCX.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\VisualStudio\Fewtags VRCX\Fewtags VRCX\bin\Debug\net6.0\Fewtags VRCX.exe
+C:\Users\User\Desktop\VisualStudio\Fewtags VRCX\Fewtags VRCX\bin\Debug\net6.0\Fewtags VRCX.deps.json
+C:\Users\User\Desktop\VisualStudio\Fewtags VRCX\Fewtags VRCX\bin\Debug\net6.0\Fewtags VRCX.runtimeconfig.json
+C:\Users\User\Desktop\VisualStudio\Fewtags VRCX\Fewtags VRCX\bin\Debug\net6.0\Fewtags VRCX.dll
+C:\Users\User\Desktop\VisualStudio\Fewtags VRCX\Fewtags VRCX\bin\Debug\net6.0\Fewtags VRCX.pdb
+C:\Users\User\Desktop\VisualStudio\Fewtags VRCX\Fewtags VRCX\obj\Debug\net6.0\Fewtags VRCX.dll
+C:\Users\User\Desktop\VisualStudio\Fewtags VRCX\Fewtags VRCX\obj\Debug\net6.0\refint\Fewtags VRCX.dll
+C:\Users\User\Desktop\VisualStudio\Fewtags VRCX\Fewtags VRCX\obj\Debug\net6.0\Fewtags VRCX.pdb
+C:\Users\User\Desktop\VisualStudio\Fewtags VRCX\Fewtags VRCX\obj\Debug\net6.0\Fewtags VRCX.genruntimeconfig.cache
+C:\Users\User\Desktop\VisualStudio\Fewtags VRCX\Fewtags VRCX\obj\Debug\net6.0\ref\Fewtags VRCX.dll
+C:\Users\User\Desktop\VisualStudio\Fewtags VRCX\Fewtags VRCX\obj\Debug\net6.0\Fewtags VRCX.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\VisualStudio\Fewtags VRCX\Fewtags VRCX\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\User\Desktop\VisualStudio\Fewtags VRCX\Fewtags VRCX\bin\Debug\net6.0\BuildSoft.OscCore.dll
+C:\Users\User\Desktop\VisualStudio\Fewtags VRCX\Fewtags VRCX\bin\Debug\net6.0\DiscordRPC.dll
+C:\Users\User\Desktop\VisualStudio\Fewtags VRCX\Fewtags VRCX\bin\Debug\net6.0\System.Collections.Immutable.dll
+C:\Users\User\Desktop\VisualStudio\Fewtags VRCX\Fewtags VRCX\bin\Debug\net6.0\vrcosclib.dll
+C:\Users\User\Desktop\VisualStudio\FewTags VRCX\Fewtags VRCX\obj\Debug\net6.0\FewTags .517A89E8.Up2Date
+C:\Users\User\Desktop\VisualStudio\FewTags VRCX\Fewtags VRCX\bin\Debug\net6.0\Resources\info.ogg
+C:\Users\User\Desktop\VisualStudio\FewTags VRCX\Fewtags VRCX\bin\Debug\net6.0\Microsoft.Toolkit.Uwp.Notifications.dll
