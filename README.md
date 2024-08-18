@@ -1,8 +1,8 @@
 # FewTags-VRCX
 FewTags VRCX Is A ReWork Of The External FewTags
-[External FewTags](https://github.com/Fewdys/FewTags/tree/main/FewTags/FewTags%20External) - Original
+[External FewTags](https://github.com/Fewdys/FewTags/tree/main/FewTags/FewTags%20External) - Original\n
 This Application Uses VRCX IPC Client From Yoinker Detector V3
-[Yoinker Detector V3](https://yd.just-h.party/) - Original
+[Yoinker Detector V3](https://yd.just-h.party/) - Original\n
 Which Allows Users To Click On Someone On VRCX And See Their FewTags As Well The Original Concept Of Seeing Your FewTags As Well As See FewTags Of People Joining And Leaving
 
 It Is Also A OSC And RPC Which Are Togglable Every Restart Of The Application
