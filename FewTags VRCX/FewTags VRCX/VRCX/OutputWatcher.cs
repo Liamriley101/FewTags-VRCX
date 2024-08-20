@@ -154,7 +154,7 @@ namespace FewTags.VRCX
                             Console.WriteLine($"[FewTags] {DisplayName} Left With No Tags");
                         }
                     }
-                    if (Line.Contains("OnLeftRoom"))
+                    if (Line.Contains("OnConnected"))
                     {
                         Console.Clear();
                         await Program.UpdateTags();
