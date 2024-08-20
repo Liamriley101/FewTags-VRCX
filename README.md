@@ -1,3 +1,6 @@
+# Updates
+Latest Update Added Toast Notifications
+
 # FewTags-VRCX
 FewTags VRCX Is A ReWork Of The
 [External FewTags](https://github.com/Fewdys/FewTags/tree/main/FewTags/FewTags%20External)
