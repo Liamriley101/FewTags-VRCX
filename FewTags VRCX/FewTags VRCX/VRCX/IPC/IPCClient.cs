@@ -62,7 +62,7 @@ namespace FewTags.VRCX.IPC
                 {
                     IpcClient.Connect(30000);
                     Thread = null;
-                    Console.WriteLine("Connected To VRCX IPC Server Notifications Will Be Sent Via VRCX");
+                    Console.WriteLine("Connected To VRCX IPC Server");
                     break;
                 }
                 catch { }
@@ -101,7 +101,7 @@ namespace FewTags.VRCX.IPC
             }
             catch
             {
-                Console.WriteLine("Lost connection to the VRCX IPC Server. Reconnecting...");
+                Console.WriteLine("Lost Connection To The VRCX IPC Server. Reconnecting...");
                 Connect();
             }
         }
