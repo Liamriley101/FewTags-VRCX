@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net6.0-windows10.0.17763.0</TargetFramework>
     <RootNamespace>Fewtags_VRCX</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>disable</Nullable>
@@ -10,7 +10,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="Fewtags.ico" />
     <Content Include="Icon.ico" />
   </ItemGroup>
 
@@ -18,11 +17,27 @@
     <PackageReference Include="DiscordRichPresence" Version="1.2.1.24" />
     <PackageReference Include="Microsoft.Toolkit.Uwp.Notifications" Version="7.1.3" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Windows.Extensions" Version="8.0.0" />
     <PackageReference Include="VRCOscLib" Version="1.4.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Resources\info.ogg">
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Resources\Icon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

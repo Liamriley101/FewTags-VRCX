@@ -6,6 +6,8 @@ using FewTags.VRCX.IPC;
 using DiscordRPC.Logging;
 using BuildSoft.VRChat.Osc.Chatbox;
 using System.Text.RegularExpressions;
+using Microsoft.Toolkit.Uwp.Notifications;
+using System.Media;
 
 namespace FewTags
 {
@@ -24,6 +26,7 @@ namespace FewTags
             Console.InputEncoding = Encoding.UTF8;
             Console.OutputEncoding = Encoding.UTF8;
 
+            Config.Check();
             if (File.Exists(Config.Configuration))
             {
                 Configure();
@@ -242,6 +245,14 @@ Toast Notifications: {(Config.ToastNotifications ? "Enabled" : "Disabled")}
                         if (Config.OSC == true)
                         {
                             OscChatbox.SendMessage(Message + Config.Blank, direct: true, complete: false);
+                        }
+                        if (Config.ToastNotifications == true)
+                        {
+                            new ToastContentBuilder()
+                                .AddText(Message)
+                                .SetToastDuration((ToastDuration)1)
+                                .AddAppLogoOverride(new Uri(Config.NotificationIcon), ToastGenericAppLogoCrop.Default)
+                                .Show();
                         }
                     }
                     Console.ResetColor();

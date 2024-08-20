@@ -1,4 +1,4 @@
-﻿using System.Diagnostics;
+﻿using System.Reflection;
 
 namespace FewTags
 {
@@ -11,7 +11,6 @@ namespace FewTags
         // Bools \\
         public static bool OSC = true;
         public static bool RPC = true;
-        public static bool SoundNotifications = true;
         public static bool ToastNotifications = true;
         // End \\
 
@@ -22,10 +21,21 @@ namespace FewTags
         public static string Blank = "\u0003\u0003";
         public static string CurrentDirectory = Directory.GetCurrentDirectory();
         public static string Configuration = CurrentDirectory + @"\Config.json";
-        public static string ApplicationName = Process.GetCurrentProcess().ProcessName;
+        public static string ApplicationName = Assembly.GetEntryAssembly().GetName().Name;
+        public static string AssemblyName = Assembly.GetExecutingAssembly().GetName().Name;
         public static string InternalTagsEndPoint = "https://raw.githubusercontent.com/Fewdys/FewTags/main/FewTags.json";
         public static string ExternalTagsEndPoint = "https://raw.githubusercontent.com/Fewdys/FewTags/main/ExternalTags.json";
         public static string Logs = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"Low\VRChat\VRChat";
+        public static string NotificationIcon = File.Exists(Path.Combine(CurrentDirectory, "Resources", "Icon.png")) ? Path.Combine(CurrentDirectory, "Resources", "Icon.png") : null;
+        public static void Check()
+        {
+            if (string.IsNullOrEmpty(NotificationIcon))
+            {
+                Console.WriteLine("Notification Icon Missing");
+                Thread.Sleep(2000);
+                Environment.Exit(1);
+            }
+        }
         // End \\
 
         // Enums \\
