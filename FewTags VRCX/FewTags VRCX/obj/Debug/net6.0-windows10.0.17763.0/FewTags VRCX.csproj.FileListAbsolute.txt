@@ -1,0 +1,34 @@
+C:\Users\User\Desktop\VisualStudio\FewTags VRCX\Fewtags VRCX\obj\Debug\net6.0-windows10.0.17763.0\FewTags VRCX.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\VisualStudio\FewTags VRCX\Fewtags VRCX\obj\Debug\net6.0-windows10.0.17763.0\Fewtags_VRCX.Properties.Resources.resources
+C:\Users\User\Desktop\VisualStudio\FewTags VRCX\Fewtags VRCX\obj\Debug\net6.0-windows10.0.17763.0\FewTags VRCX.csproj.GenerateResource.cache
+C:\Users\User\Desktop\VisualStudio\FewTags VRCX\Fewtags VRCX\obj\Debug\net6.0-windows10.0.17763.0\FewTags VRCX.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\VisualStudio\FewTags VRCX\Fewtags VRCX\obj\Debug\net6.0-windows10.0.17763.0\FewTags VRCX.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\VisualStudio\FewTags VRCX\Fewtags VRCX\obj\Debug\net6.0-windows10.0.17763.0\FewTags VRCX.AssemblyInfo.cs
+C:\Users\User\Desktop\VisualStudio\FewTags VRCX\Fewtags VRCX\obj\Debug\net6.0-windows10.0.17763.0\FewTags VRCX.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\VisualStudio\FewTags VRCX\Fewtags VRCX\bin\Debug\net6.0-windows10.0.17763.0\FewTags VRCX.exe
+C:\Users\User\Desktop\VisualStudio\FewTags VRCX\Fewtags VRCX\bin\Debug\net6.0-windows10.0.17763.0\Resources\Icon.png
+C:\Users\User\Desktop\VisualStudio\FewTags VRCX\Fewtags VRCX\bin\Debug\net6.0-windows10.0.17763.0\FewTags VRCX.deps.json
+C:\Users\User\Desktop\VisualStudio\FewTags VRCX\Fewtags VRCX\bin\Debug\net6.0-windows10.0.17763.0\FewTags VRCX.runtimeconfig.json
+C:\Users\User\Desktop\VisualStudio\FewTags VRCX\Fewtags VRCX\bin\Debug\net6.0-windows10.0.17763.0\FewTags VRCX.dll
+C:\Users\User\Desktop\VisualStudio\FewTags VRCX\Fewtags VRCX\bin\Debug\net6.0-windows10.0.17763.0\FewTags VRCX.pdb
+C:\Users\User\Desktop\VisualStudio\FewTags VRCX\Fewtags VRCX\bin\Debug\net6.0-windows10.0.17763.0\BuildSoft.OscCore.dll
+C:\Users\User\Desktop\VisualStudio\FewTags VRCX\Fewtags VRCX\bin\Debug\net6.0-windows10.0.17763.0\DiscordRPC.dll
+C:\Users\User\Desktop\VisualStudio\FewTags VRCX\Fewtags VRCX\bin\Debug\net6.0-windows10.0.17763.0\Microsoft.Toolkit.Uwp.Notifications.dll
+C:\Users\User\Desktop\VisualStudio\FewTags VRCX\Fewtags VRCX\bin\Debug\net6.0-windows10.0.17763.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\User\Desktop\VisualStudio\FewTags VRCX\Fewtags VRCX\bin\Debug\net6.0-windows10.0.17763.0\Newtonsoft.Json.dll
+C:\Users\User\Desktop\VisualStudio\FewTags VRCX\Fewtags VRCX\bin\Debug\net6.0-windows10.0.17763.0\System.Collections.Immutable.dll
+C:\Users\User\Desktop\VisualStudio\FewTags VRCX\Fewtags VRCX\bin\Debug\net6.0-windows10.0.17763.0\System.Drawing.Common.dll
+C:\Users\User\Desktop\VisualStudio\FewTags VRCX\Fewtags VRCX\bin\Debug\net6.0-windows10.0.17763.0\System.Windows.Extensions.dll
+C:\Users\User\Desktop\VisualStudio\FewTags VRCX\Fewtags VRCX\bin\Debug\net6.0-windows10.0.17763.0\vrcosclib.dll
+C:\Users\User\Desktop\VisualStudio\FewTags VRCX\Fewtags VRCX\bin\Debug\net6.0-windows10.0.17763.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\User\Desktop\VisualStudio\FewTags VRCX\Fewtags VRCX\bin\Debug\net6.0-windows10.0.17763.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\User\Desktop\VisualStudio\FewTags VRCX\Fewtags VRCX\bin\Debug\net6.0-windows10.0.17763.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\User\Desktop\VisualStudio\FewTags VRCX\Fewtags VRCX\bin\Debug\net6.0-windows10.0.17763.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\User\Desktop\VisualStudio\FewTags VRCX\Fewtags VRCX\bin\Debug\net6.0-windows10.0.17763.0\Microsoft.Windows.SDK.NET.dll
+C:\Users\User\Desktop\VisualStudio\FewTags VRCX\Fewtags VRCX\bin\Debug\net6.0-windows10.0.17763.0\WinRT.Runtime.dll
+C:\Users\User\Desktop\VisualStudio\FewTags VRCX\Fewtags VRCX\obj\Debug\net6.0-windows10.0.17763.0\FewTags .517A89E8.Up2Date
+C:\Users\User\Desktop\VisualStudio\FewTags VRCX\Fewtags VRCX\obj\Debug\net6.0-windows10.0.17763.0\FewTags VRCX.dll
+C:\Users\User\Desktop\VisualStudio\FewTags VRCX\Fewtags VRCX\obj\Debug\net6.0-windows10.0.17763.0\refint\FewTags VRCX.dll
+C:\Users\User\Desktop\VisualStudio\FewTags VRCX\Fewtags VRCX\obj\Debug\net6.0-windows10.0.17763.0\FewTags VRCX.pdb
+C:\Users\User\Desktop\VisualStudio\FewTags VRCX\Fewtags VRCX\obj\Debug\net6.0-windows10.0.17763.0\FewTags VRCX.genruntimeconfig.cache
+C:\Users\User\Desktop\VisualStudio\FewTags VRCX\Fewtags VRCX\obj\Debug\net6.0-windows10.0.17763.0\ref\FewTags VRCX.dll

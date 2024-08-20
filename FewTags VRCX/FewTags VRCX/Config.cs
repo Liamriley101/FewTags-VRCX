@@ -57,7 +57,6 @@ namespace FewTags
         {
             public bool OSC { get; set; }
             public bool RPC { get; set; }
-            public bool SoundNotifications { get; set; }
             public bool ToastNotifications { get; set; }
         }
         public class Tags
