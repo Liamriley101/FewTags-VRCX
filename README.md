@@ -1,10 +1,3 @@
-# Updates
-• Fixed Usernames
-
-• Added Toast Notifications
-
-• Set Console Coloring To Foreground Instead Of Background
-
 # FewTags-VRCX
 FewTags VRCX Is A ReWork Of The
 [External FewTags](https://github.com/Fewdys/FewTags/tree/main/FewTags/FewTags%20External)
@@ -15,6 +8,13 @@ This Application Uses VRCX IPC Client From
 Which Allows Users To Click On Someone On VRCX And See Their FewTags As Well As The Original Concept Of Seeing Your FewTags As Well As See FewTags Of People Joining And Leaving
 
 It Is Also A OSC And RPC Which Are Togglable On Restart Of The Application
+
+# Updates
+• Fixed Usernames
+
+• Added Toast Notifications
+
+• Set Console Coloring To Foreground Instead Of Background
 
 # Tags/Ranks
 Tags/Ranks Mod For Marking Malicious Users/Monkey's, Client Users, Wholesome Users, Devs, 
