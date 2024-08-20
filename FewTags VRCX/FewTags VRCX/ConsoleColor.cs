@@ -4,17 +4,17 @@ namespace FewTags
 {
     internal class ColorConsole
     {
-        static void Background(string HexColor)
+        static void Foreground(string HexColor)
         {
             ConsoleColor BackgroundColor = HexToConsoleColor(HexColor);
-            Console.BackgroundColor = BackgroundColor;
+            Console.ForegroundColor = BackgroundColor;
             if (BackgroundColor == ConsoleColor.Black)
             {
-                Console.ForegroundColor = ConsoleColor.White;
+                Console.BackgroundColor = ConsoleColor.White;
             }
             else
             {
-                Console.ForegroundColor = ConsoleColor.Black;
+                Console.BackgroundColor = ConsoleColor.Black;
             }
         }
 
@@ -55,7 +55,7 @@ namespace FewTags
             Tag = Regex.Replace(Tag, @"<\/?color=#[0-9A-Fa-f]{6}>", "");
             foreach (string HexColor in HexColors)
             {
-                Background(HexColor);
+                Foreground(HexColor);
             }
             Console.WriteLine($"[FewTags] {Tag}");
         }
