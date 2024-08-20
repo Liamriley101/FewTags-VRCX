@@ -202,7 +202,7 @@ Toast Notifications: {(Config.ToastNotifications ? "Enabled" : "Disabled")}
                 string ID = Tag.ID.ToString();
                 string PlateBigText = Tag.PlateBigText;
                 string Malicious = Tag.Malicious.ToString();
-                string DisplayName = ExternalTag.DisplayName;
+                string DisplayName = (ExternalTag != null) ? ExternalTag.DisplayName : null;
                 string User = (!string.IsNullOrEmpty(DisplayName)) ? DisplayName : (!string.IsNullOrEmpty(UserID)) ? UserID : "Unknown";
 
                 Config.Fewdys++;
