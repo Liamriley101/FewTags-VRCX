@@ -49,8 +49,8 @@ namespace FewTags
         // End \\
 
         // Classes \\
-        public static Tags SetInternalTags { get; set; }
-        public static Tags SetExternalTags { get; set; }
+        public static Tags InternalTags { get; set; }
+        public static Tags ExternalTags { get; set; }
         public static string InternalRawTags { get; set; }
         public static string ExternalRawTags { get; set; }
         public class Configurator

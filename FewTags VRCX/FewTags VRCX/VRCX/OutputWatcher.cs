@@ -92,7 +92,7 @@ namespace FewTags.VRCX
                                         Console.ForegroundColor = ConsoleColor.Green;
                                         Console.WriteLine($"[FewTags] Welcome {DisplayName}");
                                         Console.ForegroundColor = ConsoleColor.Magenta;
-                                        Config.Tags[] TagsArray = Config.SetExternalTags.Records.Where(User => User.DisplayName == DisplayName).ToArray();
+                                        Config.Tags[] TagsArray = Config.ExternalTags.Records.Where(User => User.DisplayName == DisplayName).ToArray();
                                         Program.ParseTags(TagsArray);
                                     }
                                     else if (!Config.ExternalRawTags.Contains(DisplayName))
@@ -130,7 +130,7 @@ namespace FewTags.VRCX
                         string DisplayName = Parts[1].Trim();
                         if (Config.ExternalRawTags.Contains(DisplayName))
                         {
-                            Config.Tags[] TagsArray = Config.SetExternalTags.Records.Where(User => User.DisplayName == DisplayName).ToArray();
+                            Config.Tags[] TagsArray = Config.ExternalTags.Records.Where(User => User.DisplayName == DisplayName).ToArray();
                             Program.ParseTags(TagsArray, Config.Status.Joined);
                         }
                         else if (!Config.ExternalRawTags.Contains(DisplayName))
@@ -145,7 +145,7 @@ namespace FewTags.VRCX
                         string DisplayName = Parts[1].Trim();
                         if (Config.ExternalRawTags.Contains(DisplayName))
                         {
-                            Config.Tags[] TagsArray = Config.SetExternalTags.Records.Where(User => User.DisplayName == DisplayName).ToArray();
+                            Config.Tags[] TagsArray = Config.ExternalTags.Records.Where(User => User.DisplayName == DisplayName).ToArray();
                             Program.ParseTags(TagsArray, Config.Status.Left);
                         }
                         else if (!Config.ExternalRawTags.Contains(DisplayName))

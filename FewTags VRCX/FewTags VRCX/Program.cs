@@ -104,7 +104,7 @@ Toast Notifications: {(Config.ToastNotifications ? "Enabled" : "Disabled")}
         {
             if (Config.InternalRawTags.Contains(Search))
             {
-                Config.Tags[] TagsArray = Config.SetInternalTags.Records.Where(User => User.UserID == Search).ToArray();
+                Config.Tags[] TagsArray = Config.InternalTags.Records.Where(User => User.UserID == Search).ToArray();
                 ParseTags(TagsArray, Config.Status.VRCX);
             }
             else if (!Config.InternalRawTags.Contains(Search))
@@ -167,8 +167,8 @@ Toast Notifications: {(Config.ToastNotifications ? "Enabled" : "Disabled")}
                     Config.ExternalRawTags = await Https.GetStringAsync(Config.ExternalTagsEndPoint);
                     if (!string.IsNullOrEmpty(Config.ExternalRawTags))
                     {
-                        Config.SetInternalTags = JsonConvert.DeserializeObject<Config.Tags>(Config.InternalRawTags);
-                        Config.SetExternalTags = JsonConvert.DeserializeObject<Config.Tags>(Config.ExternalRawTags);
+                        Config.InternalTags = JsonConvert.DeserializeObject<Config.Tags>(Config.InternalRawTags);
+                        Config.ExternalTags = JsonConvert.DeserializeObject<Config.Tags>(Config.ExternalRawTags);
                     }
                     else if (string.IsNullOrEmpty(Config.ExternalRawTags))
                     {
@@ -191,73 +191,62 @@ Toast Notifications: {(Config.ToastNotifications ? "Enabled" : "Disabled")}
         public static void ParseTags(Config.Tags[] TagsArray, Config.Status Status = Config.Status.Myself)
         {
             Console.WriteLine();
-            foreach (var ExternalTagArray in TagsArray)
+            Config.Tags Tag = TagsArray.LastOrDefault();
+            Config.Tags InternalTag = Config.InternalTags.Records.Where(User => User.UserID == Tag.UserID).LastOrDefault();
+            Config.Tags ExternalTag = Config.ExternalTags.Records.Where(User => User.UserID == Tag.UserID).LastOrDefault();
+
+            if (Tag.Active == true)
             {
-                Config.Tags[] InternalTagsArray = Config.SetInternalTags.Records.Where(User => User.UserID == ExternalTagArray.UserID).ToArray();
-                foreach (var TagArray in InternalTagsArray)
+                string[] Tags = Tag.Tag;
+                string UserID = Tag.UserID;
+                string ID = Tag.ID.ToString();
+                string PlateBigText = Tag.PlateBigText;
+                string Malicious = Tag.Malicious.ToString();
+                string DisplayName = ExternalTag.DisplayName;
+                string User = (!string.IsNullOrEmpty(DisplayName)) ? DisplayName : (!string.IsNullOrEmpty(UserID)) ? UserID : "Unknown";
+
+                Config.Fewdys++;
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine($"[{DateTime.Now.ToShortTimeString()}] [FewTags] ({User}) {Status} With Tags");
+                Console.ForegroundColor = ConsoleColor.Magenta;
+                Console.WriteLine($"[FewTags] UserID: {UserID}");
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"[FewTags] Malicious: {Malicious}");
+                Console.ResetColor();
+
+                var Message = new StringBuilder();
+                Message.AppendLine($"[FewTags {Status}]").AppendLine($"Name: {User}").AppendLine($"Malicious: {Malicious}").AppendLine("Tags:");
+                if (Tag.BigTextActive && !string.IsNullOrEmpty(PlateBigText))
                 {
-                    string[] Tag = TagArray.Tag;
-                    string UserID = TagArray.UserID;
-                    string ID = TagArray.ID.ToString();
-                    string PlateBigText = TagArray.PlateBigText;
-                    string Malicious = TagArray.Malicious.ToString();
-                    string DisplayName = ExternalTagArray.DisplayName;
-                    string User = (Status == Config.Status.VRCX) ? UserID : DisplayName;
-                    if (TagArray.Active == true)
+                    string ProcessedPlateText = Regex.Replace(PlateBigText, @"<\/?b>|<\/?i>|<\/?color>|<color=[^>]*>", "");
+                    ColorConsole.Print(ProcessedPlateText);
+                    Message.AppendLine(ProcessedPlateText);
+                }
+                if (Tags != null && Tags.Length > 0)
+                {
+                    foreach (var RegexTag in Tags)
                     {
-                        string Message = null;
-                        Config.Fewdys++;
-                        Console.ForegroundColor = ConsoleColor.Yellow;
-                        Console.WriteLine($"[{DateTime.Now.ToShortTimeString()}] [FewTags] ({User}) {Status.ToString()} With Tags");
-                        Console.ForegroundColor = ConsoleColor.Magenta;
-                        Console.WriteLine($"[FewTags] UserID: {UserID}");
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine($"[FewTags] Malicious: {Malicious}");
-                        Console.ResetColor();
-                        Message += $"[FewTags {Status.ToString()}]\n";
-                        Message += $"Name: {User}\n";
-                        Message += $"Malicious: {Malicious}\n";
-                        Message += $"Tags:\n";
-                        if (TagArray.BigTextActive == true && PlateBigText != null)
-                        {
-                            // Replace <b>, <i>, </b>, </i> with empty strings
-                            string ProcessedTag = Regex.Replace(PlateBigText, @"<\/?b>|<\/?i>|</color>", "");
-                            ColorConsole.Print(ProcessedTag);
-                            ProcessedTag = Regex.Replace(ProcessedTag, @"<\/?b>|<\/?i>|<\/?color>|<color=[^>]*>", "");
-                            Message += $"{ProcessedTag}\n";
-                        }
-                        if (Tag != null && Tag.Length > 0)
-                        {
-                            foreach (var RegexTag in Tag)
-                            {
-                                // Replace <b>, <i>, </b>, </i> with empty strings
-                                string ProcessedTag = Regex.Replace(RegexTag, @"<\/?b>|<\/?i>|</color>", "");
-                                ColorConsole.Print(ProcessedTag);
-                                ProcessedTag = Regex.Replace(RegexTag, @"<\/?b>|<\/?i>|<\/?color>|<color=[^>]*>", "");
-                                Message += $"{ProcessedTag}\n";
-                            }
-                        }
-                        else if (Tag == null || Tag.Length < 1)
-                        {
-                            Message += $"None\n";
-                            Console.WriteLine("[FewTags] No Tags");
-                        }
-                        if (Config.OSC == true)
-                        {
-                            OscChatbox.SendMessage(Message + Config.Blank, direct: true, complete: false);
-                        }
-                        if (Config.ToastNotifications == true)
-                        {
-                            new ToastContentBuilder()
-                                .AddText(Message)
-                                .SetToastDuration((ToastDuration)1)
-                                .AddAppLogoOverride(new Uri(Config.NotificationIcon), ToastGenericAppLogoCrop.Default)
-                                .Show();
-                        }
+                        string ProcessedTag = Regex.Replace(RegexTag, @"<\/?b>|<\/?i>|<\/?color>|<color=[^>]*>", "");
+                        ColorConsole.Print(ProcessedTag);
+                        Message.AppendLine(ProcessedTag);
                     }
-                    Console.ResetColor();
+                }
+                else if (Tags == null || Tags.Length < 1)
+                {
+                    Message.AppendLine("None");
+                    Console.WriteLine("[FewTags] No Tags");
+                }
+
+                if (Config.OSC)
+                {
+                    OscChatbox.SendMessage(Message.ToString() + Config.Blank, direct: true, complete: false);
+                }
+                if (Config.ToastNotifications)
+                {
+                    new ToastContentBuilder().AddText(Message.ToString()).SetToastDuration((ToastDuration)1).AddAppLogoOverride(new Uri(Config.NotificationIcon), ToastGenericAppLogoCrop.Default).Show();
                 }
             }
+            Console.ResetColor();
             Console.WriteLine();
         }
         // End \\
