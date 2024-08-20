@@ -1,5 +1,6 @@
 # Updates
-Latest Update Added Toast Notifications
+• Fixed Usernames
+• Added Toast Notifications
 
 # FewTags-VRCX
 FewTags VRCX Is A ReWork Of The
