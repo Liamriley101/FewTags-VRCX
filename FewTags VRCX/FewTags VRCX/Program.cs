@@ -218,16 +218,20 @@ Toast Notifications: {(Config.ToastNotifications ? "Enabled" : "Disabled")}
                 Message.AppendLine($"[FewTags {Status}]").AppendLine($"Name: {User}").AppendLine($"Malicious: {Malicious}").AppendLine("Tags:");
                 if (Tag.BigTextActive && !string.IsNullOrEmpty(PlateBigText))
                 {
-                    string ProcessedPlateText = Regex.Replace(PlateBigText, @"<\/?b>|<\/?i>|<\/?color>|<color=[^>]*>", "");
-                    ColorConsole.Print(ProcessedPlateText);
-                    Message.AppendLine(ProcessedPlateText);
+                    // Replace <b>, <i>, </b>, </i> with empty strings
+                    string ProcessedTag = Regex.Replace(PlateBigText, @"<\/?b>|<\/?i>|</color>", "");
+                    ColorConsole.Print(ProcessedTag);
+                    ProcessedTag = Regex.Replace(ProcessedTag, @"<\/?b>|<\/?i>|<\/?color>|<color=[^>]*>", "");
+                    Message.AppendLine(ProcessedTag);
                 }
                 if (Tags != null && Tags.Length > 0)
                 {
                     foreach (var RegexTag in Tags)
                     {
-                        string ProcessedTag = Regex.Replace(RegexTag, @"<\/?b>|<\/?i>|<\/?color>|<color=[^>]*>", "");
+                        // Replace <b>, <i>, </b>, </i> with empty strings
+                        string ProcessedTag = Regex.Replace(RegexTag, @"<\/?b>|<\/?i>|</color>", "");
                         ColorConsole.Print(ProcessedTag);
+                        ProcessedTag = Regex.Replace(ProcessedTag, @"<\/?b>|<\/?i>|<\/?color>|<color=[^>]*>", "");
                         Message.AppendLine(ProcessedTag);
                     }
                 }
