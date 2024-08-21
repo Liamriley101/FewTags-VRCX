@@ -197,11 +197,11 @@ Toast Notifications: {(Config.ToastNotifications ? "Enabled" : "Disabled")}
 
             if (Tag.Active == true)
             {
-                string[] Tags = Tag.Tag;
-                string UserID = Tag.UserID;
-                string ID = Tag.ID.ToString();
-                string PlateBigText = Tag.PlateBigText;
-                string Malicious = Tag.Malicious.ToString();
+                string[] Tags = InternalTag.Tag;
+                string UserID = InternalTag.UserID;
+                string ID = InternalTag.ID.ToString();
+                string PlateBigText = InternalTag.PlateBigText;
+                string Malicious = InternalTag.Malicious.ToString();
                 string DisplayName = (ExternalTag != null) ? ExternalTag.DisplayName : null;
                 string User = (!string.IsNullOrEmpty(DisplayName)) ? DisplayName : (!string.IsNullOrEmpty(UserID)) ? UserID : "Unknown";
 
@@ -216,7 +216,7 @@ Toast Notifications: {(Config.ToastNotifications ? "Enabled" : "Disabled")}
 
                 var Message = new StringBuilder();
                 Message.AppendLine($"[FewTags {Status}]").AppendLine($"Name: {User}").AppendLine($"Malicious: {Malicious}").AppendLine("Tags:");
-                if (Tag.BigTextActive && !string.IsNullOrEmpty(PlateBigText))
+                if (InternalTag.BigTextActive && !string.IsNullOrEmpty(PlateBigText))
                 {
                     // Replace <b>, <i>, </b>, </i> with empty strings
                     string ProcessedTag = Regex.Replace(PlateBigText, @"<\/?b>|<\/?i>|</color>", "");
