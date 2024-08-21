@@ -10,6 +10,8 @@ Which Allows Users To Click On Someone On VRCX And See Their FewTags As Well As 
 It Is Also A OSC And RPC Which Are Togglable On Restart Of The Application
 
 # Updates
+• Added Tag Count
+
 • Fixed Usernames (Again)
 
 • Added Toast Notifications
@@ -28,4 +30,4 @@ When You See A Windows Security Popup That Is The VRChat OSC
 
 When You See "Failed connection to discord-ipc" Either Turn Discord Activity On Or Turn RPC Off
 
-[Fewdys Server Link](https://discord.gg/EN4RrZR)
+[Fewdys Server Link](https://discord.gg/A4QwEZJY6f)
