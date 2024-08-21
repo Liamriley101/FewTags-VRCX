@@ -15,7 +15,7 @@ namespace FewTags
         // End \\
 
         // Strings \\
-        public static int Fewdys = 0;
+        public static int Tagged = 0;
         public static bool VRCCheck = true;
         public static string Version = "1.0.1";
         public static string Blank = "\u0003\u0003";

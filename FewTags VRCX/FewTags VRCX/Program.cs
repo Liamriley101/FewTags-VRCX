@@ -22,7 +22,7 @@ namespace FewTags
         // Console \\
         private static async Task Main()
         {
-            Console.Title = $"{Config.ApplicationName} v{Config.Version}";
+            Console.Title = $"{Config.ApplicationName} v{Config.Version} | Tags: 0";
             Console.InputEncoding = Encoding.UTF8;
             Console.OutputEncoding = Encoding.UTF8;
 
@@ -83,7 +83,7 @@ Toast Notifications: {(Config.ToastNotifications ? "Enabled" : "Disabled")}
                         RichPresence("FewTags VRCX", "Tags: 0");
                         while (Config.RPC == true)
                         {
-                            Discord.UpdateState($"Tags: {Config.Fewdys}");
+                            Discord.UpdateState($"Tags: {Config.Tagged}");
                             Thread.Sleep(10000);
                         }
                     }
@@ -93,8 +93,10 @@ Toast Notifications: {(Config.ToastNotifications ? "Enabled" : "Disabled")}
                     }
                 }).Start();
             }
-            while (true) {
-                Thread.Sleep(10);
+            while (true)
+            {
+                Console.Title = $"{Config.ApplicationName} v{Config.Version} | Tags: {Config.Tagged}";
+                Thread.Sleep(100);
             };
         }
         // End \\
@@ -205,7 +207,7 @@ Toast Notifications: {(Config.ToastNotifications ? "Enabled" : "Disabled")}
                 string DisplayName = (ExternalTag != null) ? ExternalTag.DisplayName : null;
                 string User = (!string.IsNullOrEmpty(DisplayName)) ? DisplayName : (!string.IsNullOrEmpty(UserID)) ? UserID : "Unknown";
 
-                Config.Fewdys++;
+                Config.Tagged++;
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine($"[{DateTime.Now.ToShortTimeString()}] [FewTags] ({User}) {Status} With Tags");
                 Console.ForegroundColor = ConsoleColor.Magenta;
