@@ -10,7 +10,7 @@ Which Allows Users To Click On Someone On VRCX And See Their FewTags As Well As 
 It Is Also A OSC And RPC Which Are Togglable On Restart Of The Application
 
 # Requirements
-• Visual Studio Runtimes (Obviously)
+• .Net Framework 6.0
 
 # Updates
 • Added Tag Count
