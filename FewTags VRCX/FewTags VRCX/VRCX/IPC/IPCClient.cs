@@ -23,14 +23,14 @@ namespace FewTags.VRCX.IPC
             });
         }
 
-        public static string IpcName()
+        public static int Hash()
         {
             var Hash = 0;
-            foreach (var c in Environment.UserName)
+            foreach (var I in Environment.UserName)
             {
-                Hash += c;
+                Hash += I;
             }
-            return $"vrcx-ipc-{Hash}";
+            return Hash;
         }
 
         public void Connect()
@@ -38,7 +38,7 @@ namespace FewTags.VRCX.IPC
             if (Thread == null)
             {
                 IpcClient?.Dispose();
-                IpcClient = new NamedPipeClientStream(".", IpcName(), PipeDirection.InOut);
+                IpcClient = new NamedPipeClientStream(".", $"vrcx-ipc-{Hash()}", PipeDirection.InOut);
 
                 Thread = new Thread(ConnectThread);
                 Thread.IsBackground = true;
@@ -62,42 +62,39 @@ namespace FewTags.VRCX.IPC
 
         private void ConnectThread()
         {
-            if (IpcClient == null)
+            if (IpcClient != null)
             {
-                return;
-            }
-            while (true)
-            {
-                try
+                while (true)
                 {
-                    IpcClient.Connect(30000);
-                    Thread = null;
-                    Console.WriteLine("Connected To VRCX IPC Server");
-                    break;
+                    try
+                    {
+                        IpcClient.Connect(30000);
+                        Thread = null;
+                        Console.WriteLine("Connected To VRCX IPC Server");
+                        break;
+                    }
+                    catch { }
+                    Thread.Sleep(30000);
                 }
-                catch { }
-                Thread.Sleep(30000);
             }
         }
 
         private void Write(string Message)
         {
-            if (IpcClient == null || !IpcClient.IsConnected)
+            if (IpcClient != null || IpcClient.IsConnected)
             {
-                return;
+                using var MemoryStream = new MemoryStream(PacketBuffer);
+                MemoryStream.Seek(0, SeekOrigin.Begin);
+                using var StreamWriter = new StreamWriter(MemoryStream, NoBomEncoding, 65535, true);
+
+                StreamWriter.Write(Message);
+                StreamWriter.Write((char)0x00);
+                StreamWriter.Flush();
+
+                var Length = (int)MemoryStream.Position;
+
+                IpcClient?.BeginWrite(PacketBuffer, 0, Length, OnWrite, null);
             }
-
-            using var MemoryStream = new MemoryStream(PacketBuffer);
-            MemoryStream.Seek(0, SeekOrigin.Begin);
-            using var StreamWriter = new StreamWriter(MemoryStream, NoBomEncoding, 65535, true);
-
-            StreamWriter.Write(Message);
-            StreamWriter.Write((char)0x00);
-            StreamWriter.Flush();
-
-            var Length = (int)MemoryStream.Position;
-
-            IpcClient?.BeginWrite(PacketBuffer, 0, Length, OnWrite, null);
         }
         private void Write(VrcxMessagePacket IpcPacket) => Write(JsonSerializer.Serialize(IpcPacket, VrcxMessagePacketContext.Default.VrcxMessagePacket));
 
