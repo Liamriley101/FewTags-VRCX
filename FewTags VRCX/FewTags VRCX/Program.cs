@@ -1,13 +1,13 @@
 ﻿using DiscordRPC;
 using System.Text;
 using FewTags.VRCX;
+using System.Media;
 using Newtonsoft.Json;
 using FewTags.VRCX.IPC;
 using DiscordRPC.Logging;
 using BuildSoft.VRChat.Osc.Chatbox;
 using System.Text.RegularExpressions;
 using Microsoft.Toolkit.Uwp.Notifications;
-using System.Media;
 
 namespace FewTags
 {

@@ -19,7 +19,7 @@ namespace FewTags
         public static bool VRCCheck = true;
         public static string Version = "1.0.1";
         public static string Blank = "\u0003\u0003";
-        public static string CurrentDirectory = Directory.GetCurrentDirectory();
+        public static string CurrentDirectory = AppDomain.CurrentDomain.BaseDirectory;
         public static string Configuration = CurrentDirectory + @"\Config.json";
         public static string ApplicationName = Assembly.GetEntryAssembly().GetName().Name;
         public static string AssemblyName = Assembly.GetExecutingAssembly().GetName().Name;

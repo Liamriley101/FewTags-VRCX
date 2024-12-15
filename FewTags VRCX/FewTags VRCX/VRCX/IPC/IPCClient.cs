@@ -23,12 +23,22 @@ namespace FewTags.VRCX.IPC
             });
         }
 
+        public static string IpcName()
+        {
+            var Hash = 0;
+            foreach (var c in Environment.UserName)
+            {
+                Hash += c;
+            }
+            return $"vrcx-ipc-{Hash}";
+        }
+
         public void Connect()
         {
             if (Thread == null)
             {
                 IpcClient?.Dispose();
-                IpcClient = new NamedPipeClientStream(".", "vrcx-ipc", PipeDirection.InOut);
+                IpcClient = new NamedPipeClientStream(".", IpcName(), PipeDirection.InOut);
 
                 Thread = new Thread(ConnectThread);
                 Thread.IsBackground = true;
