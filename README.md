@@ -13,13 +13,7 @@ It Is Also A OSC And RPC Which Are Togglable On Restart Of The Application
 • .Net Framework 6.0
 
 # Updates
-• Added Tag Count
-
-• Fixed Usernames (Again)
-
-• Added Toast Notifications
-
-• Set Console Coloring To Foreground Instead Of Background
+• IPC Client Hash Fix
 
 # Tags/Ranks
 Tags/Ranks Mod For Marking Malicious Users/Monkey's, Client Users, Wholesome Users, Devs, 
