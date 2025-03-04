@@ -11,6 +11,7 @@ It Is Also A OSC And RPC Which Are Togglable On Restart Of The Application
 
 # Requirements
 • .Net Framework 6.0 Runtime
+https://dotnet.microsoft.com/en-us/download/dotnet/6.0
 
 # Updates
 • Fixed Joins And Leaves Not Working (VRChat Added UserIDs Making It Easier To Identify Who Is Who)
