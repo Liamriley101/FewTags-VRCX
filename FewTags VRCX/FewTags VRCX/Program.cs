@@ -1,7 +1,6 @@
 ﻿using DiscordRPC;
 using System.Text;
 using FewTags.VRCX;
-using System.Media;
 using Newtonsoft.Json;
 using FewTags.VRCX.IPC;
 using DiscordRPC.Logging;

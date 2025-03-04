@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 using System.Text.RegularExpressions;
 
 namespace FewTags.VRCX
@@ -124,10 +125,11 @@ namespace FewTags.VRCX
             {
                 foreach (var Line in Lines)
                 {
-                    if (Line.Contains("OnPlayerJoined "))
+                    string Contains = Line.Contains("OnPlayerJoined ") ? "OnPlayerJoined " : Line.Contains("OnPlayerLeft ") ? "OnPlayerLeft" : null;
+                    if (string.IsNullOrEmpty(Contains) == false)
                     {
-                        string[] Parts = Line.Split(new[] { "OnPlayerJoined " }, StringSplitOptions.None);
-                        string DisplayName = Parts[1].Trim();
+                        string Parts = Line.Split(new[] { Contains }, StringSplitOptions.None)[1].Trim();
+                        string DisplayName = Parts.Split(" ", StringSplitOptions.None)[0];
                         if (Config.ExternalRawTags.Contains(DisplayName))
                         {
                             Config.Tags[] TagsArray = Config.ExternalTags.Records.Where(User => User.DisplayName == DisplayName).ToArray();
@@ -137,21 +139,6 @@ namespace FewTags.VRCX
                         {
                             Console.ForegroundColor = ConsoleColor.Magenta;
                             Console.WriteLine($"[FewTags] {DisplayName} Joined With No Tags");
-                        }
-                    }
-                    if (Line.Contains("OnPlayerLeft "))
-                    {
-                        string[] Parts = Line.Split(new[] { "OnPlayerLeft " }, StringSplitOptions.None);
-                        string DisplayName = Parts[1].Trim();
-                        if (Config.ExternalRawTags.Contains(DisplayName))
-                        {
-                            Config.Tags[] TagsArray = Config.ExternalTags.Records.Where(User => User.DisplayName == DisplayName).ToArray();
-                            Program.ParseTags(TagsArray, Config.Status.Left);
-                        }
-                        else if (!Config.ExternalRawTags.Contains(DisplayName))
-                        {
-                            Console.ForegroundColor = ConsoleColor.Magenta;
-                            Console.WriteLine($"[FewTags] {DisplayName} Left With No Tags");
                         }
                     }
                     if (Line.Contains("OnConnected"))
