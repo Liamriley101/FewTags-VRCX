@@ -13,8 +13,7 @@ It Is Also A OSC And RPC Which Are Togglable On Restart Of The Application
 • .Net Framework 6.0
 
 # Updates
-• IPC Client Hash Fix
-• Database Username Fix (When Users Join/Leave Or Have Been Selected In VRCX It Shows DisplayName And If Database Doesn't Contain DisplayName It Is Set To UserId)
+• Fixed Joins And Leaves Not Working (VRChat Added UserIDs Making It Easier To Identify Who Is Who)
 
 # Tags/Ranks
 Tags/Ranks Mod For Marking Malicious Users/Monkey's, Client Users, Wholesome Users, Devs, 
