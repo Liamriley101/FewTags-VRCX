@@ -93,7 +93,7 @@ namespace FewTags.VRCX.IPC
                                     {
                                         if (RecPackage.MsgType == "ShowUserDialog")
                                         {
-                                            Program.HandleJoin(RecPackage.Data);
+                                            Program.HandleIPC(RecPackage.Data);
                                         }
                                     }
                                 }

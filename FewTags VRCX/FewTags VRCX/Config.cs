@@ -9,9 +9,9 @@ namespace FewTags
         // End \\
 
         // Bools \\
-        public static bool OSC = true;
+        public static bool OSC = false;
         public static bool RPC = true;
-        public static bool ToastNotifications = true;
+        public static bool ToastNotifications = false;
         // End \\
 
         // Strings \\
@@ -44,15 +44,14 @@ namespace FewTags
             VRCX,
             Joined,
             Left,
-            Myself
+            Myself,
+            Unknown
         }
         // End \\
 
         // Classes \\
         public static Tags InternalTags { get; set; }
         public static Tags ExternalTags { get; set; }
-        public static string InternalRawTags { get; set; }
-        public static string ExternalRawTags { get; set; }
         public class Configurator
         {
             public bool OSC { get; set; }
