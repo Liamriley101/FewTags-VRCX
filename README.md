@@ -10,7 +10,7 @@ Which Allows Users To Click On Someone On VRCX And See Their FewTags As Well As 
 It Is Also A OSC And RPC Which Are Togglable On Restart Of The Application
 
 # Requirements
-• .Net Framework 6.0
+• .Net Framework 6.0 Runtime
 
 # Updates
 • Fixed Joins And Leaves Not Working (VRChat Added UserIDs Making It Easier To Identify Who Is Who)
