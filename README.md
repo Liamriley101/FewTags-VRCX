@@ -1,6 +1,6 @@
 # FewTags-VRCX
 FewTags VRCX Is A ReWork Of The
-[External FewTags](https://github.com/Fewdys/FewTags/tree/main/FewTags/FewTags%20External)
+[External FewTags](https://github.com/Fewdys/FewTags-VRC-Source)
 
 This Application Uses VRCX IPC Client From
 [Yoinker Detector V3](https://yd.just-h.party/)
