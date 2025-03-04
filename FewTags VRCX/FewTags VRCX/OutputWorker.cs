@@ -127,8 +127,9 @@ namespace FewTags.VRCX
                 {
                     Config.Status Status = State.Contains("Joined") ? Config.Status.Joined : State.Contains("Left") ? Config.Status.Left : Config.Status.Unknown;
                     string Parts = Line.Split(new[] { State }, StringSplitOptions.None)[1].Trim();
+                    string UserID = Parts.Split(new char[] { '(', ')' }, StringSplitOptions.None)[1];
                     string DisplayName = Parts.Split(" ", StringSplitOptions.None)[0];
-                    Config.Tags[] TagsArray = Config.ExternalTags.Records.Where(User => User.DisplayName == DisplayName).ToArray();
+                    Config.Tags[] TagsArray = Config.ExternalTags.Records.Where(User => User.UserID == UserID).ToArray();
                     if (TagsArray.LastOrDefault() != null)
                     {
                         Program.ParseTags(TagsArray, Status);
@@ -137,10 +138,12 @@ namespace FewTags.VRCX
                     {
                         Console.ForegroundColor = ConsoleColor.Magenta;
                         Console.WriteLine($"[FewTags] {DisplayName} {Status} With No Tags");
+                        Console.ResetColor();
                     }
                 }
                 if (Line.Contains("OnConnected"))
                 {
+                    Console.ResetColor();
                     Console.Clear();
                     await Program.UpdateTags();
                 }
