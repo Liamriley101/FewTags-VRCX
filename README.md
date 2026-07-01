@@ -7,7 +7,7 @@ This Application Uses VRCX IPC Client From
 
 Which Allows Users To Click On Someone On VRCX And See Their FewTags As Well As The Original Concept Of Seeing Your FewTags As Well As See FewTags Of People Joining And Leaving
 
-It Is Also A OSC And RPC Which Are Togglable On Restart Of The Application
+It Is Also A OSC And RPC Which Is Togglable On Restart The Application
 
 # Requirements
 • .Net Framework 6.0 Runtime
