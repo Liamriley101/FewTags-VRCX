@@ -1,4 +1,4 @@
-# FewTags-VRCX
+# External-FewTags-VRCX
 FewTags VRCX Is A ReWork Of The
 [External FewTags](https://github.com/Fewdys/FewTags-VRC-Source)
 
